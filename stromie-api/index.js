@@ -1,7 +1,18 @@
 const express = require('express');
-const axios = require('axios');
+const mysql = require('mysql');
 const app = express();
 const port = 2434;
+
+const connection = mysql.createConnection({
+    host: "145.93.176.5",
+    user: "sa",
+    password: "Nivosparta1!"
+})
+
+connection.connect(function(err) {
+    if(err) throw err;
+    console.log("Gelukt");
+})
 
 let clients = [];
 

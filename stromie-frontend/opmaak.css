@@ -1,5 +1,6 @@
 body {
     font-family: Roboto, sans-serif;
+    background-color: #FFFF00;
   }
   
   .header .bottom-bar {
@@ -14,6 +15,9 @@ body {
       margin-left: auto;
       padding-left: 15px;
       padding-right: 15px;
+  }
+  .Tafel {
+      
   }
   
   .row-header {
@@ -32,6 +36,9 @@ body {
       width: auto;
       float: left;
       margin-right: 30px;
+      max-height: 100px;
+      position:absolute;
+      top: 320px;
   }
   
   .site-logo {
@@ -49,6 +56,8 @@ body {
       display: block;
         margin-left: auto;
         margin-right: auto;
+
+
   }
   
   .navbar > ul {
@@ -56,10 +65,10 @@ body {
       padding-top: 6px;
       padding-bottom: 6px;
       display: inline-block;
-      width: auto;
-      margin: 0 7.5;
       border-top: 1px solid black;
       border-bottom: 1px solid black;
+      width: 100%;
+      text-align: center;      
   }
   
   .navbar > ul > a {
@@ -70,12 +79,11 @@ body {
       padding: 0 15px;
       text-align: center;
       display: inline-block;
-      font-family: 'Open Sans', sans-serif;
+      font-family: "Roboto", sans-serif;
       text-transform: uppercase;
       font-weight: 600;
       font-size: 14px;
-      line-height: 60px; 
-      margin-top: 0;
+      line-height: 60px;   
       transition: margin-top 0.4s ease;
   }
   
@@ -96,7 +104,6 @@ body {
   .main {
       padding-top: 30px !important;
       padding-bottom: 30px !important;
-      background-image: url(background.png) !important;
       background-position: 0 0 !important;
       background-repeat: repeat !important;
   }
@@ -140,12 +147,13 @@ body {
   }
   
   .top-bar {
-      padding: 7.5px 0;
-      color: black;
       background-image: url(polygonal.jpg);
-      width: 100%;
+      width: 105%;
       float: left;
-  }
+      position: relative;
+      left: -8px;
+      top: -8px;
+      }
   
   .row-adres {
       margin-left: 15px;

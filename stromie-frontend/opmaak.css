@@ -28,6 +28,13 @@ body {
       margin-left: 15px;
       margin-right: 15px;
   }
+
+  .Tafel {
+   width:max-content(10%);
+   height: 10%;
+   border: 1px black;
+   border-radius: 10px;
+  }
   
   .white-line {
       position: relative;

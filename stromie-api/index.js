@@ -1,18 +1,15 @@
 const express = require('express');
-const mysql = require('mysql');
+const { MongoClient }= require('mongodb');
 const app = express();
 const port = 2434;
 
-const connection = mysql.createConnection({
-    host: "145.93.176.5",
-    user: "sa",
-    password: "Nivosparta1!"
-})
+const url = "mongodb://145.93.176.5:27017";
+const client = new MongoClient(url);
 
-connection.connect(function(err) {
-    if(err) throw err;
-    console.log("Gelukt");
-})
+const dbName = "Stromi";
+
+client.connect();
+const db = client.db(dbName);
 
 let clients = [];
 

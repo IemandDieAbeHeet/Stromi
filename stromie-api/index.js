@@ -10,6 +10,7 @@ const dbName = "Stromi";
 
 client.connect();
 const db = client.db(dbName);
+const collection = db.collection("stroomgebruik");
 
 let clients = [];
 

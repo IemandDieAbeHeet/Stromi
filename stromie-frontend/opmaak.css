@@ -36,6 +36,28 @@ body {
    border-radius: 10px;
   }
   
+  .Tafelcijfer1 {
+      position:absolute;
+      top: 700px;
+      left: 190px;
+  }
+  .Tafelcijfer2 {
+      position:absolute;
+      top:700px;
+      left: 616px;
+  }
+
+  .Tafelcijfer3 {
+      position:absolute;
+      top: 700px;
+      left: 1042px;
+  }
+
+  .Tafelcijfer4 {
+      position:absolute;
+      top: 700px;
+      left: 1467px;
+  }
   .white-line {
       position: relative;
       min-height: 1px;

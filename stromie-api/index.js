@@ -1,7 +1,15 @@
 const express = require('express');
-const axios = require('axios');
+const { MongoClient }= require('mongodb');
 const app = express();
 const port = 2434;
+
+const url = "mongodb://145.93.176.5:27017";
+const client = new MongoClient(url);
+
+const dbName = "Stromi";
+
+client.connect();
+const db = client.db(dbName);
 
 let clients = [];
 

@@ -1,5 +1,6 @@
 body {
     font-family: Roboto, sans-serif;
+    background-color: #FFFF00;
   }
   
   .header .bottom-bar {
@@ -15,12 +16,48 @@ body {
       padding-left: 15px;
       padding-right: 15px;
   }
+ .Titel {
+     position: absolute;
+     left: 650px;
+     top: 500px;
+     font-family: Roboto, sans-serif;
+     font-size: 24px;
+ }
   
   .row-header {
       margin-left: 15px;
       margin-right: 15px;
   }
+
+  .Tafel {
+   width:max-content(10%);
+   height: 10%;
+   border: 1px black;
+   border-radius: 10px;
+  }
   
+  .Tafelcijfer1 {
+      position:absolute;
+      top: 700px;
+      left: 190px;
+  }
+  .Tafelcijfer2 {
+      position:absolute;
+      top:700px;
+      left: 616px;
+  }
+
+  .Tafelcijfer3 {
+      position:absolute;
+      top: 700px;
+      left: 1042px;
+  }
+
+  .Tafelcijfer4 {
+      position:absolute;
+      top: 700px;
+      left: 1467px;
+  }
   .white-line {
       position: relative;
       min-height: 1px;
@@ -32,6 +69,9 @@ body {
       width: auto;
       float: left;
       margin-right: 30px;
+      max-height: 100px;
+      position:absolute;
+      top: 320px;
   }
   
   .site-logo {
@@ -49,6 +89,8 @@ body {
       display: block;
         margin-left: auto;
         margin-right: auto;
+
+
   }
   
   .navbar > ul {
@@ -56,10 +98,10 @@ body {
       padding-top: 6px;
       padding-bottom: 6px;
       display: inline-block;
-      width: auto;
-      margin: 0 7.5;
       border-top: 1px solid black;
       border-bottom: 1px solid black;
+      width: 100%;
+      text-align: center;      
   }
   
   .navbar > ul > a {
@@ -70,12 +112,11 @@ body {
       padding: 0 15px;
       text-align: center;
       display: inline-block;
-      font-family: 'Open Sans', sans-serif;
+      font-family: "Roboto", sans-serif;
       text-transform: uppercase;
       font-weight: 600;
       font-size: 14px;
-      line-height: 60px; 
-      margin-top: 0;
+      line-height: 60px;   
       transition: margin-top 0.4s ease;
   }
   
@@ -96,7 +137,6 @@ body {
   .main {
       padding-top: 30px !important;
       padding-bottom: 30px !important;
-      background-image: url(background.png) !important;
       background-position: 0 0 !important;
       background-repeat: repeat !important;
   }
@@ -140,12 +180,13 @@ body {
   }
   
   .top-bar {
-      padding: 7.5px 0;
-      color: black;
       background-image: url(polygonal.jpg);
-      width: 100%;
+      width: 105%;
       float: left;
-  }
+      position: relative;
+      left: -8px;
+      top: -8px;
+      }
   
   .row-adres {
       margin-left: 15px;
@@ -208,27 +249,85 @@ body {
   }
   
   .button-occ {
-      background-color: #FFFF00;
-      border-width: 1px !important;
-      text-transform: uppercase;
-      transition: all 0.4s ease;
-  
-      padding: 10px 16px;
-      font-size: 17px;
-      line-height: 1.3333333;
-      border-radius: 3px;
-  
-      display: inline-block;
-      margin-bottom: 0;
-      font-weight: 700;
-      text-align: center;
-      vertical-align: middle;
-      touch-action: manipulation;
-      cursor: pointer;
-      background-image: none;
-      border: 1px solid transparent;
-      white-space: nowrap;
-      user-select: none;
-  
-      text-decoration: none
-    }
+	background-color: #FFFF00;
+	border-width: 1px !important;
+	text-transform: uppercase;
+	transition: all 0.4s ease;
+
+	padding: 10px 16px;
+    font-size: 17px;
+    line-height: 1.3333333;
+    border-radius: 3px;
+
+	display: inline-block;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+	user-select: none;
+
+	text-decoration: none;
+}
+
+.base {
+	width: 100%;
+	margin: auto;
+	float: left;
+}
+.inner-base {
+	padding: 9px;
+	border-radius: 3px;
+	min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+}
+
+.Zoekfilters{
+	margin: auto;
+}
+
+.opties{
+	display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.forum{
+    line-height: 1.5;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: inline-block;
+    width: 23%;
+    margin: 0 7.5;
+}
+
+.outline {
+	width: 100%;
+	margin: auto;
+	float: left;
+}
+
+.innerline{
+	display: flex;
+}
+
+.forum-b{
+	width: 33.33%;
+	padding: 5px;
+}

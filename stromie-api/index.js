@@ -1,16 +1,16 @@
 const express = require('express');
 const { MongoClient }= require('mongodb');
 const app = express();
-const port = 2434;
+const port = 2435;
 
-const url = "mongodb://145.93.176.5:27017";
+const url = "mongodb://localhost:27017";
 const client = new MongoClient(url);
 
 const dbName = "Stromi";
 
 client.connect();
 const db = client.db(dbName);
-const collection = db.collection("stroomgebruik");
+const collection = db.collection("stroomdata");
 
 let clients = [];
 
@@ -22,17 +22,32 @@ app.post("/register", (req, res) => {
         res.status(400).json('Geen tafel nummer opgegeven');
     }
     
-    let clientId = clients.length + 1;
-    clients.push({
+    let clientId;
+
+    clientId = clients.length + 1;
+
+    let client = {
         id: clientId,
         tafelNummer: json.tafelNummer,
         ampere: 0
+    };
+
+    clients.push(client);
+
+    collection.find( { tafelNummer: json.tafelNummer }).limit(1).count().then((dbcount) => {
+        let timeString = Date.now.toString();
+        let ampereArray = [
+            { [timeString]: 0 }
+        ];
+
+        let dbClient = {
+            tafelNummer: json.tafelNummer,
+            ampereWaardes: ampereArray
+        };
+        
+        if(dbcount < 1) collection.insertOne(dbClient);
+        res.json({ id: clientId });
     });
-
-    let index = clients.findIndex(client => client.id === json.clientId);
-
-    console.log(clients[index]);
-    res.json({ id: clientId });
 });
 
 app.post("/update", (req, res) => {
@@ -49,9 +64,20 @@ app.post("/update", (req, res) => {
         return client.id === json.clientId;
     })
 
+    clients[index].ampere = json.ampere;
+
     console.log(clients[index]);
 
-    clients[index].ampere = json.ampere;
+    let timeString = Date.now().toString();
+
+    collection.updateOne({ tafelNummer: clients[index].tafelNummer }, { $push: {
+            ampereWaardes: {
+                $each: [{[timeString]: json.ampere}] 
+            }
+        }
+    });
+
+    res.status(200);
 });
 
 app.get("/", (req, res) => {
@@ -62,6 +88,7 @@ app.get("/", (req, res) => {
     let index = clients.findIndex(client => {
         return client.id === json.clientId;
     });
+
     res.json = clients[index];
 });
 

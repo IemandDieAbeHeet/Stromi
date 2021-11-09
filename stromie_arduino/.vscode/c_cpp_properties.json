@@ -1,0 +1,63 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/include",
+                "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/src",
+                "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/cores/arduino/api/deprecated",
+                "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/cores/arduino",
+                "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/variants/uno2018",
+                "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/EEPROM/src",
+                "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/HID/src",
+                "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/SPI/src",
+                "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/SoftwareSerial/src",
+                "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/Wire/src",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/include",
+                    "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/src",
+                    "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/cores/arduino/api/deprecated",
+                    "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/cores/arduino",
+                    "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/variants/uno2018",
+                    "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/EEPROM/src",
+                    "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/HID/src",
+                    "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/SPI/src",
+                    "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/SoftwareSerial/src",
+                    "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/Wire/src",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=50203",
+                "ARDUINO_AVR_UNO_WIFI_REV2",
+                "UNO_WIFI_REV2_328MODE",
+                "MILLIS_USE_TIMERB3",
+                "F_CPU=16000000L",
+                "ARDUINO_ARCH_MEGAAVR",
+                "ARDUINO=10808",
+                "USB_VID=0x03eb",
+                "USB_PID=0x2145",
+                "USB_PRODUCT=\"Arduino Uno WiFi Rev2\"",
+                "USB_MANUFACTURER=\"Arduino\"",
+                ""
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "C:/Users/abevr/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
+            "compilerArgs": [
+                "-mmcu=atmega4809",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}

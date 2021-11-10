@@ -19,7 +19,7 @@ body {
  .Titel {
      position: absolute;
      left: 650px;
-     top: 500px;
+     top: 450px;
      font-family: Roboto, sans-serif;
      font-size: 24px;
  }
@@ -38,24 +38,24 @@ body {
   
   .Tafelcijfer1 {
       position:absolute;
-      top: 700px;
+      top: 630px;
       left: 190px;
   }
   .Tafelcijfer2 {
       position:absolute;
-      top:700px;
+      top:630px;
       left: 616px;
   }
 
   .Tafelcijfer3 {
       position:absolute;
-      top: 700px;
+      top: 630px;
       left: 1042px;
   }
 
   .Tafelcijfer4 {
       position:absolute;
-      top: 700px;
+      top: 630px;
       left: 1467px;
   }
   .white-line {
@@ -273,3 +273,14 @@ body {
   
       text-decoration: none
     }
+ .Tafel2 {
+     font-family: Roboto, sans-serif;
+     ;
+ }
+
+ .ampere {
+     margin: auto;
+     width: 50%;
+     border: 3px black
+     padding 10px;
+ }

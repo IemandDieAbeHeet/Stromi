@@ -82,11 +82,11 @@ app.post("/update", (req, res) => {
 
 app.get("/", (req, res) => {
     let json = req.body;
-    if(!clients.includes(json.id)) {
-        res.status(406).json('Client ID niet herkend.');
+    if(!clients.some(c => c.tafelNummer === json.tafelNummer)) {
+        res.status(406).json('Tafelnummer niet herkend.');
     }
     let index = clients.findIndex(client => {
-        return client.id === json.clientId;
+        return client.tafelNummer === json.tafelNummer;
     });
 
     res.json = clients[index];

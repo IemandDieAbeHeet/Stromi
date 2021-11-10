@@ -11698,3 +11698,8 @@ body {
 .footer {
   padding: 5rem 0;
 }
+
+.chart {
+  width: 610px;
+  height: 450px;
+}

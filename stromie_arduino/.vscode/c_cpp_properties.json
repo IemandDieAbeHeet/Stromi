@@ -10,14 +10,18 @@
             "includePath": [
                 "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/include",
                 "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/src",
+                "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/Wire/src",
+                "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/.pio/libdeps/uno_wifi_rev2/ArduinoJson/src",
+                "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/.pio/libdeps/uno_wifi_rev2/WiFiNINA/src",
+                "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/SPI/src",
+                "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/.pio/libdeps/uno_wifi_rev2/ArduinoHttpClient/src",
+                "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/.pio/libdeps/uno_wifi_rev2/EmonLib",
                 "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/cores/arduino/api/deprecated",
                 "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/cores/arduino",
                 "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/variants/uno2018",
                 "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/EEPROM/src",
                 "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/HID/src",
-                "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/SPI/src",
                 "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/SoftwareSerial/src",
-                "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/Wire/src",
                 ""
             ],
             "browse": {
@@ -25,14 +29,18 @@
                 "path": [
                     "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/include",
                     "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/src",
+                    "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/Wire/src",
+                    "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/.pio/libdeps/uno_wifi_rev2/ArduinoJson/src",
+                    "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/.pio/libdeps/uno_wifi_rev2/WiFiNINA/src",
+                    "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/SPI/src",
+                    "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/.pio/libdeps/uno_wifi_rev2/ArduinoHttpClient/src",
+                    "C:/Users/abevr/Projecten/ICT-Proftaak/Stromie/stromie_arduino/.pio/libdeps/uno_wifi_rev2/EmonLib",
                     "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/cores/arduino/api/deprecated",
                     "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/cores/arduino",
                     "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/variants/uno2018",
                     "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/EEPROM/src",
                     "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/HID/src",
-                    "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/SPI/src",
                     "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/SoftwareSerial/src",
-                    "C:/Users/abevr/.platformio/packages/framework-arduino-megaavr/libraries/Wire/src",
                     ""
                 ]
             },

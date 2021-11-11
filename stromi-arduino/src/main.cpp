@@ -11,7 +11,7 @@ EnergyMonitor emon1;                   // Create an instance
 
 char SSID[] = "ArduinoWifi";
 char PASS[] = "0619H+i6";
-const char server[] = "145.93.100.136";
+const char server[] = "145.93.100.154";
 
 WiFiClient wifi;
 HttpClient client = HttpClient(wifi, server, 2435);
@@ -40,7 +40,7 @@ void registerArduino() {
 void updateAmperage() {
   StaticJsonDocument<16> json;
 
-  double amps = emon1.calcIrms(480);
+  double amps = emon1.calcIrms(1480);
   Serial.println(amps);
   json["clientId"] = clientId;
   json["ampere"] = amps;
@@ -78,5 +78,4 @@ void setup()
 void loop()
 {
   updateAmperage();
-  delay(1000);
 }

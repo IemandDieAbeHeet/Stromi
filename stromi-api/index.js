@@ -28,16 +28,21 @@ app.post("/register", (req, res) => {
 
     clientId = clients.length + 1;
 
+    let timeString = Date.now().toString();
+    let ampereArray = [
+        { [timeString]: 0 }
+    ];
+
     let client = {
         id: clientId,
         tafelNummer: json.tafelNummer,
-        ampere: []
+        ampere: ampereArray
     };
 
     clients.push(client);
 
     collection.find( { tafelNummer: json.tafelNummer }).limit(1).count().then((dbcount) => {
-        let timeString = Date.now.toString();
+        let timeString = Date.now().toString();
         let ampereArray = [
             { [timeString]: 0 }
         ];
@@ -66,18 +71,16 @@ app.post("/update", (req, res) => {
         return client.id === json.clientId;
     })
 
-    let timeString = Date.now().toString();
 
-    clients[index].ampere.push({[timeString]: json.ampere});
+    let timeString = Date.now().toString();
+    let timeObject = { [timeString]: json.ampere };
+    clients[index].ampere.push(timeObject);
 
     console.log(clients[index]);
 
     collection.updateOne({ tafelNummer: clients[index].tafelNummer }, { $push: {
-            ampereWaardes: {
-                $each: [{[timeString]: json.ampere}] 
-            }
-        }
-    });
+        ampere: timeObject
+    }});
 
     res.status(200);
 });

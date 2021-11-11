@@ -1,6 +1,8 @@
 const express = require('express');
 const { MongoClient }= require('mongodb');
+const cors = require('cors');
 const app = express();
+app.use(cors());
 const port = 2435;
 
 const url = "mongodb://localhost:27017";
@@ -29,7 +31,7 @@ app.post("/register", (req, res) => {
     let client = {
         id: clientId,
         tafelNummer: json.tafelNummer,
-        ampere: 0
+        ampere: []
     };
 
     clients.push(client);
@@ -64,11 +66,11 @@ app.post("/update", (req, res) => {
         return client.id === json.clientId;
     })
 
-    clients[index].ampere = json.ampere;
+    let timeString = Date.now().toString();
+
+    clients[index].ampere.push({[timeString]: json.ampere});
 
     console.log(clients[index]);
-
-    let timeString = Date.now().toString();
 
     collection.updateOne({ tafelNummer: clients[index].tafelNummer }, { $push: {
             ampereWaardes: {
@@ -81,15 +83,7 @@ app.post("/update", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-    let json = req.body;
-    if(!clients.some(c => c.tafelNummer === json.tafelNummer)) {
-        res.status(406).json('Tafelnummer niet herkend.');
-    }
-    let index = clients.findIndex(client => {
-        return client.tafelNummer === json.tafelNummer;
-    });
-
-    res.json = clients[index];
+    res.json(clients);
 });
 
 app.listen(port, () => {

@@ -11,7 +11,7 @@ EnergyMonitor emon1;                   // Create an instance
 
 char SSID[] = "ArduinoWifi";
 char PASS[] = "0619H+i6";
-const char server[] = "145.93.100.154";
+const char server[] = "145.93.100.130";
 
 WiFiClient wifi;
 HttpClient client = HttpClient(wifi, server, 2435);

@@ -1,0 +1,24 @@
+body {
+    font-family: Roboto, sans-serif;
+ }
+
+.top-bar {
+    width: 105%;
+    float: left;
+    position: relative;
+    left: -8px;
+    top: -8px;
+    
+    }
+
+  .row-adres {
+    margin-left: 15px;
+    margin-right: 15px;
+    }   
+  
+ .logo img{
+        max-height: 300px;
+        display: block;
+          margin-left: auto;
+          margin-right: auto;  
+    }    

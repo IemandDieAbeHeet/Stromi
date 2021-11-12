@@ -1,6 +1,8 @@
 const express = require('express');
 const { MongoClient }= require('mongodb');
+const cors = require('cors');
 const app = express();
+app.use(cors());
 const port = 2435;
 
 const url = "mongodb://localhost:27017";
@@ -84,15 +86,7 @@ app.post("/update", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-    let json = req.body;
-    if(!clients.includes(json.id)) {
-        res.status(406).json('Client ID niet herkend.');
-    }
-    let index = clients.findIndex(client => {
-        return client.id === json.clientId;
-    });
-
-    res.json = clients[index];
+    res.json(clients);
 });
 
 app.listen(port, () => {
